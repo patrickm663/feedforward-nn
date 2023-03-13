@@ -37,7 +37,7 @@ Data process_data(float[][] data) {
 	    }
 	}
     }
-    return(df);
+    return df;
 }
 
 float sigmoid(float x) {
@@ -46,7 +46,7 @@ float sigmoid(float x) {
 
 int transform_output(float x) {
     if(x > 0.5) return 1;
-    return(0);
+    return 0;
 }
 
 float dot_product(float[] a, float[] b) {
@@ -64,12 +64,14 @@ float feedforward(float[] inputs, Neuron neuron) {
 }
 
 float log_transform(float x) {
-    return(log(x+1.0f));
+    return log(x+1.0f);
 }
 
 float[][] read_csv(string filename) {
     auto file_data = readText(filename);
     auto csv_data = file_data.chomp.splitter('\n').map!(a => a.splitter(',').array).array;
+    
+    // create a 2D array of floats, where "bad" wine is assigned a 1 and "good" wine a zero
     float[][] data_float = csv_data.map!(a => a.map!(b => b.canFind('.') ? b.to!float : b == "bad\r" ? 0.0f : 1.0f).array).array;
     return data_float;
 }
@@ -94,7 +96,7 @@ Neuron train(float[][] X, int[] y, float learning_rate, int n_epochs) {
             neuron.bias += learning_rate * error * output * (1 - output);
         }
     }
-    return(neuron);
+    return neuron;
 }
 
 int[] predict(float[][] X, Neuron neuron) {
@@ -103,7 +105,7 @@ int[] predict(float[][] X, Neuron neuron) {
     foreach(i; 0..rows){
         pred[i] = transform_output(feedforward(X[i], neuron));
     }
-    return(pred);
+    return pred;
 }
 
 int[][] confusion_matrix(int[] actual, int[] predicted) {
@@ -127,7 +129,7 @@ int[][] confusion_matrix(int[] actual, int[] predicted) {
 	    }
 	}
     }
-    return(cm);
+    return cm;
 }
 
 void main() {
