@@ -71,7 +71,7 @@ float[][] read_csv(string filename) {
     auto file_data = readText(filename);
     auto csv_data = file_data.chomp.splitter('\n').map!(a => a.splitter(',').array).array;
     
-    // create a 2D array of floats, where "bad" wine is assigned a 1 and "good" wine a zero
+    // create a 2D array of floats, where "bad" wine is assigned a 0 and "good" wine a 1
     float[][] data_float = csv_data.map!(a => a.map!(b => b.canFind('.') ? b.to!float : b == "bad\r" ? 0.0f : 1.0f).array).array;
     return data_float;
 }
