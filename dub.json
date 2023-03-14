@@ -1,0 +1,9 @@
+{
+	"authors": [
+		"Patrick Moehrke"
+	],
+	"copyright": "Copyright © 2023, Patrick Moehrke",
+	"description": "A simple implementation of a feed-forward neural network in D.",
+	"license": "MIT",
+	"name": "feedforward-nn"
+}

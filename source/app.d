@@ -134,7 +134,7 @@ int[][] confusion_matrix(int[] actual, int[] predicted) {
 
 void main() {
     // Define the input data
-    float[][] raw_data = read_csv("../data/wine.csv");
+    float[][] raw_data = read_csv("data/wine.csv");
 
     // Extract the input data and expected output
     // TODO: split data into training and testing

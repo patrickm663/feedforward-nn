@@ -1,24 +1,16 @@
-# Compiled Object files
-*.o
-*.obj
-
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Compiled Static libraries
-*.a
-*.lib
-
-# Executables
-*.exe
-
-# DUB
 .dub
 docs.json
 __dummy.html
 docs/
-
-# Code coverage
+/feedforward-nn
+feedforward-nn.so
+feedforward-nn.dylib
+feedforward-nn.dll
+feedforward-nn.a
+feedforward-nn.lib
+feedforward-nn-test-*
+*.exe
+*.pdb
+*.o
+*.obj
 *.lst
