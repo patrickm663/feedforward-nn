@@ -1,3 +1,4 @@
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg)](https://opensource.org/licenses/MIT)
 # Feedforward Neural Network in D
 A simple implementation of a feed-forward neural network in D.
 
