@@ -14,7 +14,7 @@ dub run
 ```
 
 ## TODO
-- Implement logic to split the data into training and testing based on a user parameter
+- Implement logic to split the data into training and testing based on a user's parameter
 - Test on more datasets (importing the "wine.csv" dataset to have something to test was one of the biggest hurdles)
 - Construct a `neuralnetwork` class that implements the functions as methods rather, in order to create an 'API'
 - Test whether it can be called from other languages
